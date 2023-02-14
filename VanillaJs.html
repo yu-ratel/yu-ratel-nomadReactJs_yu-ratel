@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <span> number : 0 </span>
+        <button id="up_btn"> up </button>
+        <button id="down_btn" > down </button>
+    </body>
+    <script>
+        let count = 0;
+        const span = document.querySelector("span");
+        const up = document.getElementById("up_btn")
+        const down = document.getElementById("down_btn");
+        function up_click() {
+            count < 10 ? count++ : alert("10이 최대입니다.");
+            span.innerText = `number : ${count}`;
+        }
+        function down_click() {
+            count > 0 ? count-- : alert("음수로는 내려가지 않습니다.");
+            span.innerText = `number : ${count}`;
+        }
+        up.addEventListener("click", up_click);
+        down.addEventListener("click", down_click);
+    </script>
+</html>
